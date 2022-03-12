@@ -1,1 +1,59 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: .5fr 5fr .5fr;
+  grid-template-areas: "nav  nav   nav    nav   nav   nav"
+                                    "side main main main main main"
+                                    "end  end   end   end   end   end ";
+  margin: 0;
+}
 
+#top-navigation {
+  grid-area: nav;
+  background-color: navy;
+  color: white;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: .5fr;
+/*  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;*/
+}
+
+#top-navigation a:hover {
+  background-color: pink;
+}
+
+.main-nav-button {
+  width: 100%;
+  height: 10%;
+}
+
+#section-navigation {
+  grid-area: side;
+  background-color: gray;
+  color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto, 5%);
+}
+
+#section-navigation a:hover{
+  background-color: pink;
+  text-decoration: underline;
+}
+
+#content-container {
+  grid-area: main;
+  background-color: white;
+  color: black;
+  overflow: scroll;
+  padding: 0 10% 0 5%;
+}
+
+#end-navigation {
+  grid-area: end;
+  background-color: navy;
+  color: white;
+  text-align: center;
+}

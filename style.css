@@ -1,3 +1,4 @@
+/* This is the styling for the overall page structure  */
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -8,34 +9,32 @@
   margin: 0;
 }
 
-#top-navigation {
+hr{
+  width: 80%;
+}
+
+/* This is the styling for the top header bar */
+#top-page-header {
   grid-area: nav;
   background-color: navy;
   color: white;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: .5fr;
-/*  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;*/
+  text-align: center;
 }
 
-#top-navigation a:hover {
-  background-color: pink;
-}
-
-.main-nav-button {
-  width: 100%;
-  height: 10%;
-}
-
+/* This is the styling for the left nav menu */
 #section-navigation {
   grid-area: side;
   background-color: gray;
   color: white;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(auto, 5%);
+  /*grid-template-rows: repeat(auto, 5%);*/
+  align-content: start;
+}
+
+#section-navigation a {
+  padding: 5% 5% 5% 5%;
+  text-align: center;
 }
 
 #section-navigation a:hover{
@@ -43,6 +42,7 @@
   text-decoration: underline;
 }
 
+/* This is the styling for the content displayed in the main section */
 #content-container {
   grid-area: main;
   background-color: white;
@@ -51,7 +51,8 @@
   padding: 0 10% 0 5%;
 }
 
-#end-navigation {
+/* This is the styling for the end of the page footer bar */
+#end-page-footer {
   grid-area: end;
   background-color: navy;
   color: white;

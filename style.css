@@ -1,16 +1,37 @@
+/* Fonts
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Supermercado One', cursive;
+*/
+
+
 /* This is the styling for the overall page structure  */
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: .5fr 5fr .5fr;
+  grid-template-rows: 100px 1fr 60px;
+  /*grid-template-rows: .5fr 5fr .5fr;*/
   grid-template-areas: "nav  nav   nav    nav   nav   nav"
                                     "side main main main main main"
                                     "end  end   end   end   end   end ";
   margin: 0;
+  height: 100vh;
 }
 
 hr{
   width: 80%;
+}
+
+h1 {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+h2 {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+p {
+  font-family: 'Noto Serif', serif;
 }
 
 /* This is the styling for the top header bar */
@@ -19,6 +40,7 @@ hr{
   background-color: navy;
   color: white;
   text-align: center;
+  font-family: 'Nanum Myeongjo', serif;
 }
 
 /* This is the styling for the left nav menu */
@@ -30,11 +52,13 @@ hr{
   grid-template-columns: 100%;
   /*grid-template-rows: repeat(auto, 5%);*/
   align-content: start;
+  height: 100%;
 }
 
 #section-navigation a {
   padding: 5% 5% 5% 5%;
   text-align: center;
+  font-family: 'Nanum Myeongjo', serif;
 }
 
 #section-navigation a:hover{
@@ -47,8 +71,9 @@ hr{
   grid-area: main;
   background-color: white;
   color: black;
-  overflow: scroll;
-  padding: 0 10% 0 5%;
+  overflow-y: auto;
+  padding: 0 15% 0 10%;
+  height: 100%;
 }
 
 /* This is the styling for the end of the page footer bar */

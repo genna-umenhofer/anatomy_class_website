@@ -8,14 +8,15 @@ font-family: 'Supermercado One', cursive;
 /* This is the styling for the overall page structure  */
 .parent {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: auto repeat(5, 1fr);
   grid-template-rows: 100px 1fr 60px;
   /*grid-template-rows: .5fr 5fr .5fr;*/
   grid-template-areas: "nav  nav   nav    nav   nav   nav"
                                     "side main main main main main"
-                                    "end  end   end   end   end   end ";
+                                    "end  end   end   end   end   end";
   margin: 0;
   height: 100vh;
+  background-color: #4B50BF;
 }
 
 hr{
@@ -24,21 +25,27 @@ hr{
 
 h1 {
   font-family: 'Nanum Myeongjo', serif;
+  font-size: 46px;
+
 }
 
 h2 {
   font-family: 'Nanum Myeongjo', serif;
+  font-weight: bolder;
+  text-decoration: underline;
+  font-size: 30px;
 }
 
 p {
   font-family: 'Noto Serif', serif;
+  font-size: 16px;
 }
 
 /* This is the styling for the top header bar */
 #top-page-header {
   grid-area: nav;
-  background-color: navy;
-  color: white;
+  background-color: #4B50BF;
+  color: #EBEDF2;
   text-align: center;
   font-family: 'Nanum Myeongjo', serif;
 }
@@ -46,40 +53,47 @@ p {
 /* This is the styling for the left nav menu */
 #section-navigation {
   grid-area: side;
-  background-color: gray;
-  color: white;
+  background-color: #4B50BF;
+  color: #EBEDF2;
   display: grid;
   grid-template-columns: 100%;
   /*grid-template-rows: repeat(auto, 5%);*/
   align-content: start;
-  height: 100%;
+  width: 15vw;
+  min-width: 150px;
+  overflow-y: auto;
 }
 
 #section-navigation a {
   padding: 5% 5% 5% 5%;
   text-align: center;
   font-family: 'Nanum Myeongjo', serif;
+  text-decoration: none;
 }
 
-#section-navigation a:hover{
-  background-color: pink;
-  text-decoration: underline;
+#section-navigation a:hover {
+  background-color: #6E30F2;
+}
+
+#section-navigation a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* This is the styling for the content displayed in the main section */
 #content-container {
   grid-area: main;
-  background-color: white;
-  color: black;
+  background-color: #EBEDF2;
+  color: #231773;
   overflow-y: auto;
   padding: 0 15% 0 10%;
-  height: 100%;
+  border-radius: 30px 0 0 30px;
 }
 
 /* This is the styling for the end of the page footer bar */
 #end-page-footer {
   grid-area: end;
-  background-color: navy;
-  color: white;
+  background-color: #4B50BF;
+  color: #EBEDF2;
   text-align: center;
 }
